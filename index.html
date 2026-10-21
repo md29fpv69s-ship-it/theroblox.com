@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Game Hub</title>
+<style>
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #08090c;
+  color: #f7f7fa;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-panel {
+  background: #27282e;
+  width: 100%;
+  padding: 48px 4% 65px;
+  text-align: center;
+}
+
+h1 {
+  font-size: clamp(34px, 7vw, 48px);
+  margin: 8px 0 24px;
+}
+
+input {
+  display: block;
+  width: 100%;
+  padding: 22px 20px;
+  margin-bottom: 44px;
+  border-radius: 19px;
+  border: 2px solid #484b59;
+  background: #343640;
+  color: white;
+  font-size: 20px;
+}
+
+input::placeholder { color: #d0d0d8; }
+
+.login-button {
+  width: 100%;
+  padding: 17px;
+  margin-top: -30px;
+  margin-bottom: 62px;
+  border: 2px solid #dedee3;
+  border-radius: 18px;
+  background: transparent;
+  color: #dedee3;
+  font-size: 22px;
+}
+
+a {
+  color: #f7f7fa;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 19px;
+}
+
+.divider {
+  border: 0;
+  border-top: 1px solid #44454e;
+  margin: 60px 0 40px;
+}
+
+.secondary {
+  display: block;
+  width: 100%;
+  padding: 20px 8px;
+  margin: 25px 0;
+  border: 0;
+  border-radius: 17px;
+  background: #393b46;
+  color: white;
+  font-size: 19px;
+}
+
+.signup {
+  margin-top: 90px;
+  font-size: 17px;
+  font-weight: normal;
+}
+
+.signup a { font-size: 17px; }
+
+.notice {
+  color: #bdbdc7;
+  font-size: 12px;
+  margin-top: 30px;
+}
+</style>
+</head>
+<body>
+
+<main class="login-panel">
+  <h1>Login to Game Hub</h1>
+
+  <form id="demo-login">
+    <input type="text"
+      placeholder="Username"
+      autocomplete="off"
+      aria-label="Demo username">
+
+    <input type="password"
+      placeholder="Password"
+      autocomplete="off"
+      aria-label="Demo password">
+
+    <button class="login-button" type="submit">
+      Log In
+    </button>
+  </form>
+
+  <a href="#forgot">Forgot Password or Username?</a>
+
+  <hr class="divider">
+
+  <button class="secondary" type="button">
+    Email Me a One-Time Code
+  </button>
+
+  <button class="secondary" type="button">
+    Use Another Device
+  </button>
+
+  <p class="signup">
+    New to Game Hub? <a href="#signup">Sign Up</a>
+  </p>
+
+  <p class="notice">
+    Design preview — no login details are collected or sent.
+  </p>
+</main>
+
+<script>
+document.getElementById("demo-login").addEventListener(
+  "submit", function(event) {
+    event.preventDefault();
+    alert("This is a demo login screen!");
+  }
+);
+</script>
+
+</body>
+</html>
